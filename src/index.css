@@ -1,6 +1,12 @@
 /* ============================================================
-   MERICS corporate font — Neo Sans Pro
+   Font
+   ------------------------------------------------------------
+   The public/test build uses Manrope (free, loaded via Google Fonts in
+   index.html). The licensed MERICS corporate font (Neo Sans Pro) is
+   commented out below — re-enable it (and restore public/fonts/*.otf +
+   set --font) for the internal Azure DevOps build.
    ============================================================ */
+/*
 @font-face {
   font-family: "Neo Sans Pro";
   src: url("/fonts/NeoSansPro-Light.otf") format("opentype");
@@ -29,6 +35,7 @@
   font-style: normal;
   font-display: swap;
 }
+*/
 
 :root {
   /* --- MERICS corporate palette (from Colours.pdf, RGB → hex) --- */
@@ -71,7 +78,7 @@
   --shadow-md: 0 4px 14px -4px rgba(26, 26, 26, 0.14), 0 1px 3px rgba(26, 26, 26, 0.06);
   --shadow-lg: 0 16px 40px -12px rgba(26, 26, 26, 0.26), 0 4px 10px rgba(26, 26, 26, 0.08);
 
-  --font: "Neo Sans Pro", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font: "Manrope", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --r-sm: 3px;
   --r-md: 5px;

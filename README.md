@@ -24,7 +24,9 @@ at a time.
   two meetings can share a week. "Now" jumps to the current/next session.
 - **Focus mode** — full-screen presentation with section tabs; cycle items with
   ← → / Space, Esc to exit.
-- **Dark mode**, MERICS corporate design (Neo Sans Pro + corporate palette).
+- **Dark mode**, MERICS corporate palette. The public build uses **Manrope**
+  (free) as a stand-in; the licensed corporate font (Neo Sans Pro) is reserved
+  for the internal build.
 - Data persists to **localStorage** behind a swappable repository layer.
 
 ## Tech stack
@@ -63,6 +65,15 @@ public/         MERICS logo + Neo Sans Pro fonts
 docs/           dynamics-integration.md — planned Dynamics events sync
 ```
 
+## Deployment (GitHub Pages)
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the app
+and publishes `dist/` to GitHub Pages. One-time setup: in the repo, go to
+**Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Published at `https://JK-mer.github.io/extrel-agenda-tool/`. The Vite `base` is
+relative, so it also works from any sub-path or a custom domain.
+
 ## Roadmap
 
 1. **Now** — local mock data in the browser (this build).
@@ -74,6 +85,9 @@ docs/           dynamics-integration.md — planned Dynamics events sync
 
 ## Note on assets
 
-`public/` contains the MERICS logo and the proprietary **Neo Sans Pro** font, which
-the app needs to render in the corporate design. Keep this repository private, or
-remove those assets before making it public.
+The licensed **Neo Sans Pro** font is **not** committed (its `@font-face` is
+commented out in `src/index.css` and `public/fonts/` is git-ignored) so the
+public build ships only the free Manrope font. The MERICS logo is retained. To
+restore the corporate font for the internal build: drop the `.otf` files back
+into `public/fonts/`, un-ignore the folder, uncomment the `@font-face` block, and
+set `--font` to `"Neo Sans Pro"`.

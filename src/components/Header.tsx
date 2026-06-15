@@ -83,7 +83,11 @@ export function Header() {
     <header className="toolbar-wrapper">
       <div className="toolbar">
         <div className="toolbar-brand">
-          <img src="/merics-logo.png" alt="MERICS" className="toolbar-logo" />
+          <img
+            src={`${import.meta.env.BASE_URL}merics-logo.png`}
+            alt="MERICS"
+            className="toolbar-logo"
+          />
           <span className="toolbar-divider" aria-hidden />
           <div className="toolbar-titles">
             <span className="toolbar-title">External Relations</span>

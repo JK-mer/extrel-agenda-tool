@@ -24,3 +24,6 @@ pnpm-debug.log*
 .idea/
 .DS_Store
 *.local
+
+# Licensed corporate font — kept locally, excluded from the public repo
+public/fonts/
