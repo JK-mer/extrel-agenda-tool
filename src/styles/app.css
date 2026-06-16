@@ -315,6 +315,13 @@
   box-shadow: var(--shadow-md);
   border-color: var(--line-strong);
 }
+/* Dark mode: lift each tile off the near-black backdrop with a subtle
+   wash of its own category accent, so sections read as distinct,
+   gently-coloured panels rather than flat black. */
+:root[data-theme="dark"] .tile {
+  background-color: color-mix(in srgb, var(--accent) 12%, var(--card));
+  background-image: linear-gradient(180deg, var(--tint), transparent 180px);
+}
 .tile--dragging {
   opacity: 0.3;
 }

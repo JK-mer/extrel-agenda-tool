@@ -105,9 +105,9 @@
 
 :root[data-theme="dark"] {
   --bg: #15171c;
-  --card: #1e2128;
-  --card-2: #242832;
-  --surface: #262a33;
+  --card: #232732;
+  --card-2: #2a2f3a;
+  --surface: #2c313c;
 
   --ink: #e9e7e2;
   --ink-soft: #a8a49b;
