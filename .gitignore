@@ -25,5 +25,7 @@ pnpm-debug.log*
 .DS_Store
 *.local
 
-# Licensed corporate font — kept locally, excluded from the public repo
+# Licensed corporate font — kept locally, excluded from the public repo.
+# public/fonts/ is served by the build; files/ holds the raw source fonts.
 public/fonts/
+files/

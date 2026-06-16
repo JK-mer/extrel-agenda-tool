@@ -1,12 +1,13 @@
 /* ============================================================
    Font
    ------------------------------------------------------------
-   The public/test build uses Manrope (free, loaded via Google Fonts in
-   index.html). The licensed MERICS corporate font (Neo Sans Pro) is
-   commented out below — re-enable it (and restore public/fonts/*.otf +
-   set --font) for the internal Azure DevOps build.
+   The MERICS corporate font (Neo Sans Pro) is licensed for web use but
+   must NOT be committed to the public repo. The .otf files live in
+   public/fonts/ (git-ignored) and are served by the build; they are
+   distributed to the build pipeline / deploy target out-of-band, not
+   via git. Manrope (loaded via Google Fonts in index.html) remains a
+   graceful fallback for clones built without the licensed font.
    ============================================================ */
-/*
 @font-face {
   font-family: "Neo Sans Pro";
   src: url("/fonts/NeoSansPro-Light.otf") format("opentype");
@@ -30,12 +31,25 @@
 }
 @font-face {
   font-family: "Neo Sans Pro";
+  src: url("/fonts/NeoSansPro-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neo Sans Pro";
   src: url("/fonts/NeoSansPro-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-*/
+@font-face {
+  font-family: "Neo Sans Pro";
+  src: url("/fonts/NeoSansPro-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   /* --- MERICS corporate palette (from Colours.pdf, RGB → hex) --- */
@@ -78,7 +92,7 @@
   --shadow-md: 0 4px 14px -4px rgba(26, 26, 26, 0.14), 0 1px 3px rgba(26, 26, 26, 0.06);
   --shadow-lg: 0 16px 40px -12px rgba(26, 26, 26, 0.26), 0 4px 10px rgba(26, 26, 26, 0.08);
 
-  --font: "Manrope", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font: "Neo Sans Pro", "Manrope", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --r-sm: 3px;
   --r-md: 5px;
