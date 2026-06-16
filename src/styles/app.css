@@ -1003,6 +1003,7 @@
   align-items: center;
   gap: 9px;
   margin-top: 12px;
+  margin-bottom: 16px;
   padding: 9px 12px;
   border: 1px solid var(--line-strong);
   border-radius: var(--r-md);

@@ -31,7 +31,6 @@ export default function App() {
         {/* key forces a fresh staggered entrance when switching weeks */}
         <TileBoard key={activeMeetingId} />
         <footer className="app-foot">
-          Local preview · data stays in this browser · Azure DevOps + Microsoft SSO to follow
           <button
             className="reset-link"
             onClick={() => {
